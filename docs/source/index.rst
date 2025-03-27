@@ -22,4 +22,5 @@ Contents
  xml_dom.rst
  xpath.rst
  xslt.rst
+ xquery.rst
 Lumache hosts its documentation on Read the Docs.
