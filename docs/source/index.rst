@@ -25,4 +25,5 @@ Contents
  xquery.rst
  xmldtd.rst
  xsd_schema.rst
+ xsd_datatypes.rst
 Lumache hosts its documentation on Read the Docs.
