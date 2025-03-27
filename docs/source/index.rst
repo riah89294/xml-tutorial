@@ -19,4 +19,5 @@ Contents
 .. toctree::
 
  xml_ajax.rst
+ xml_dom.rst
 Lumache hosts its documentation on Read the Docs.
