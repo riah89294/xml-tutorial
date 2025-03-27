@@ -21,4 +21,5 @@ Contents
  xml_ajax.rst
  xml_dom.rst
  xpath.rst
+ xslt.rst
 Lumache hosts its documentation on Read the Docs.
