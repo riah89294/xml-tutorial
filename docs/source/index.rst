@@ -2,11 +2,11 @@ Welcome to XML Learning Summary!
 ===================================
 
 **PRESENTED BY:**
-MARIA LORENA DE GUMA n/
-JULI-ANN VEGA n/
-PRESCOTT PADUGA n/
-ART BESANA n/
-KIM CALIM n/
+MARIA LORENA DE GUMA |  
+JULI-ANN VEGA |  
+PRESCOTT PADUGA |  
+ART BESANA |  
+KIM CALIM 
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
