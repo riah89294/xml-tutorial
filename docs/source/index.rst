@@ -8,8 +8,6 @@ PRESCOTT PADUGA |
 ART BESANA |  
 KIM CALIM 
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
 
 .. note::
 
