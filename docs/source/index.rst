@@ -18,13 +18,14 @@ Contents
 
 .. toctree::
 
- xml_ajax.rst
- xml_dom.rst
- xpath.rst
- xslt.rst
- xquery.rst
- xmldtd.rst
- xsd_schema.rst
- xsd_datatypes.rst
- web_services.rst
+ .xml_tutorial.rst
+ .xml_ajax.rst
+ .xml_dom.rst
+ .xpath.rst
+ .xslt.rst
+ .xquery.rst
+ .xmldtd.rst
+ .xsd_schema.rst
+ .xsd_datatypes.rst
+ .web_services.rst
 Lumache hosts its documentation on Read the Docs.
