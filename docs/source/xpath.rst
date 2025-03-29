@@ -60,5 +60,14 @@ XPath uses path expressions to navigate XML documents and select nodes efficient
 
   </bookstore>
 
+XPath Axes
+----------
+XPath axes define relationships between nodes in an XML document, allowing navigation based on hierarchy. Axes like `ancestor`, `child`, `descendant`, `parent`, and `self` help locate nodes relative to the current node. Location paths can be absolute (`/`) or relative and consist of steps with an axis, node test, and predicates. Expressions like `child::book` select child elements, while `attribute::lang` retrieves attributes. XPath axes enable precise data extraction, making them essential for querying XML structures efficiently. These features enhance XML manipulation in applications across various programming languages, ensuring structured and dynamic data retrieval.
+
+XPath Operators
+---------------
+XPath operators allow comparisons, arithmetic calculations, and logical conditions in XML queries. Operators like `|` combine node-sets, while `+`, `-`, `*`, `div`, and `mod` perform mathematical operations. Comparison operators (`=`, `!=`, `<`, `>`, `<=`, `>=`) filter values, and logical operators (`or`, `and`) refine search conditions, enabling precise data retrieval.
+
+
 
   
