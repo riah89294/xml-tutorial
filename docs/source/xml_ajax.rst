@@ -292,3 +292,91 @@ AJAX retrieves database data without page reloads. When a user selects a custome
   </body>
   </html>
 
+XML Applications
+----------------
+XML and JavaScript enable dynamic web applications. An XML file (`cd_catalog.xml`) is loaded using AJAX and displayed in an HTML table. Users can navigate between CDs, retrieve album details, and interact dynamically using DOM manipulation, improving user experience. JavaScript functions handle XML data retrieval and display it efficiently.
+
+**example:Displaying and Navigating XML Data Using JavaScript and AJAX**
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>XML CD Catalog</title>
+      <style>
+          table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+              padding: 5px;
+          }
+      </style>
+  </head>
+  <body>
+
+      <h2>CD Catalog</h2>
+      <button onclick="loadXMLDoc()">Load CD Collection</button>
+      <table id="cdTable"></table>
+
+      <h3>Selected CD Details</h3>
+      <div id="cdDetails"></div>
+      <button onclick="previousCD()">Previous</button>
+      <button onclick="nextCD()">Next</button>
+
+      <script>
+          var x, i = 0;  // Variables to store XML data and index
+
+          function loadXMLDoc() {
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                      displayTable(this);
+                  }
+              };
+              xmlhttp.open("GET", "cd_catalog.xml", true);
+              xmlhttp.send();
+          }
+
+          function displayTable(xml) {
+              var xmlDoc = xml.responseXML;
+              var table = "<tr><th>Artist</th><th>Title</th></tr>";
+              x = xmlDoc.getElementsByTagName("CD");
+
+              for (var j = 0; j < x.length; j++) {
+                  table += "<tr onclick='displayCD(" + j + ")'><td>" +
+                      x[j].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+                      "</td><td>" +
+                      x[j].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                      "</td></tr>";
+              }
+              document.getElementById("cdTable").innerHTML = table;
+              displayCD(0);
+          }
+
+          function displayCD(index) {
+              i = index;
+              document.getElementById("cdDetails").innerHTML =
+                  "<strong>Artist:</strong> " + x[i].getElementsByTagName("ARTIST")      [0].childNodes[0].nodeValue +
+                  "<br><strong>Title:</strong> " + x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                  "<br><strong>Year:</strong> " + x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+          }
+
+          function nextCD() {
+              if (i < x.length - 1) {
+                  i++;
+                  displayCD(i);
+              }
+          }
+
+          function previousCD() {
+              if (i > 0) {
+                  i--;
+                  displayCD(i);
+              }
+          }
+      </script>
+
+  </body>
+</html>
+
+
