@@ -202,3 +202,43 @@ AJAX with ASP enables real-time communication between a web page and a server wi
   <p>Suggestions: <span id="txtHint"></span></p>
   </body>
   </html>
+- **ASP Back-end (gethint.asp)**
+  <%
+  response.expires=-1
+  dim a(10)
+  a(1)="Anna"
+  a(2)="Brittany"
+  a(3)="Cinderella"
+  a(4)="Diana"
+  a(5)="Eva"
+  a(6)="Fiona"
+  a(7)="Gunda"
+  a(8)="Hege"
+  a(9)="Inga"
+  a(10)="Johanna"
+
+  ' Get the query parameter from the URL
+  q=ucase(request.querystring("q"))
+
+  ' Look up all hints from array if q is not empty
+  if len(q) > 0 then
+    hint=""
+    for i=1 to 10
+      if q=ucase(mid(a(i),1,len(q))) then
+        if hint="" then
+          hint=a(i)
+        else
+          hint=hint & ", " & a(i)
+        end if
+      end if
+    next
+  end if
+
+  ' Output "no suggestion" if no hint was found
+  if hint="" then
+    response.write("No suggestion")
+  else
+    response.write(hint)
+  end if
+  %>
+
