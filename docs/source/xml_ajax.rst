@@ -1,6 +1,6 @@
 Welcome to XML AJAX!
 =====================   
-As we started learning about **XML AJAX**, we discovered how **Asynchronous JavaScript and XML (AJAX)** helps web pages update content without needing a full reload. **AJAX** is not a programming language but a technique that combines **JavaScript, the HTML DOM, and the *`XMLHttpRequest`* ** object to communicate with a web server in the background. This process allows websites to retrieve and send data more efficiently, making web applications more interactive and responsive.  
+As we started learning about **XML AJAX**, we discovered how **Asynchronous JavaScript and XML (AJAX)** helps web pages update content without needing a full reload. **AJAX** is not a programming language but a technique that combines **JavaScript**, the **HTML DOM**, and the *`XMLHttpRequest`* ** object to communicate with a web server in the background. This process allows websites to retrieve and send data more efficiently, making web applications more interactive and responsive.  
 
 One of the first things we learned about **AJAX** was the *`XMLHttpRequest`* object, which plays a key role in exchanging data with a server. We practiced creating an *`XMLHttpRequest`* using *`var xhttp = new XMLHttpRequest();`* and explored how to use methods like *`open()`* and *`send()`* to make requests. We also studied the difference between **GET** and **POST** requests—**GET** is faster but might retrieve cached data, while **POST** is better for sending sensitive or larger data.  
 
