@@ -250,3 +250,45 @@ AJAX with ASP enables real-time communication between a web page and a server wi
   end if
   %>
 
+**AJAX Database **
+------------------
+AJAX retrieves database data without page reloads. When a user selects a customer, showCustomer() sends an AJAX request to getcustomer.php, which queries the database and returns customer details dynamically in an HTML table, enhancing interactivity.
+
+**example: AJAX Request**
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <script>
+  function showCustomer(str) {
+      if (str == "") {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+       }
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("txtHint").innerHTML = this.responseText;
+          }
+      };
+      xhttp.open("GET", "getcustomer.php?q=" + str, true);
+      xhttp.send();
+  }
+  </script>
+  </head>
+  <body>
+
+  <h2>Select a Customer:</h2>
+  <select onchange="showCustomer(this.value)">
+      <option value="">Select a customer</option>
+      <option value="1">Customer 1</option>
+      <option value="2">Customer 2</option>
+      <option value="3">Customer 3</option>
+  </select>
+
+  <h3>Customer Info:</h3>
+  <div id="txtHint">Customer details will be displayed here...</div>
+
+  </body>
+  </html>
+
