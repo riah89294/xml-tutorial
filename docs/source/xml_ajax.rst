@@ -38,3 +38,7 @@ readyState: Tracks request status (0-4).
 responseText/responseXML: Retrieves server responses.
 
 status/statusText: Provides request status (e.g., 200: "OK", 404: "Not Found").
+
+**AJAX - Send a Request To a Server**
+
+  The **XMLHttpRequest** object enables web pages to communicate with a server without reloading. To send a request, the **open()** method specifies the request type (GET or POST), the URL, and whether it is asynchronous, while the **send()** method transmits the request. **GET** requests are simpler and faster but may return cached data, whereas **POST** is used for larger data transfers, database updates, or secure user input handling. When using POST, an HTTP header must be set with **setRequestHeader()** before sending data. AJAX requests should typically be asynchronous (**async = true**) to prevent page freezing, allowing scripts to execute while waiting for a response. Synchronous requests (**async = false**) block script execution until the server responds and are discouraged due to performance issues. To handle server responses, the **onreadystatechange** property defines a function that executes when the request state changes. When **readyState** reaches 4 and **status** is 200, the response can be processed and displayed. AJAX is widely used in modern web development to create dynamic and interactive applications by enabling real-time data updates without requiring full page reloads.
