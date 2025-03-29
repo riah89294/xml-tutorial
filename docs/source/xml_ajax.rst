@@ -69,26 +69,26 @@ The **XMLHttpRequest** object allows web pages to communicate with a server with
 The **onreadystatechange** property monitors **readyState** changes in an **XMLHttpRequest**, with 4 indicating completion. The **status** property checks HTTP responses, while **responseText** and **responseXML** retrieve data. AJAX enables dynamic updates using callback functions and header retrieval methods, improving web interactivity without requiring full page reloads.
 
 **Example: Handling AJAX Response Efficiently**
-  
+
   function loadDoc(url, callback) {
-    var xhttp = new XMLHttpRequest();
+      var xhttp = new XMLHttpRequest();
     
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            callback(this); // Calls the specified callback function
-        }
-    };
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              callback(this); // Calls the specified callback function
+          }
+      };
 
-    xhttp.open("GET", url, true);
-    xhttp.send();
-}
+      xhttp.open("GET", url, true);
+      xhttp.send();
+  }
 
-// Callback function to handle responseText
-function handleTextResponse(xhttp) {
-    document.getElementById("demo").innerHTML = xhttp.responseText;
-}
+  // Callback function to handle responseText
+  function handleTextResponse(xhttp) {
+      document.getElementById("demo").innerHTML = xhttp.responseText;
+  }
 
-// Callback function to handle responseXML
+  // Callback function to handle responseXML
   function handleXMLResponse(xhttp) {
       var xmlDoc = xhttp.responseXML;
       var txt = "";
