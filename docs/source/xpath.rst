@@ -15,17 +15,25 @@ By applying these concepts, we strengthened our ability to query and manipulate 
 Here is a sample XML file and an XPath query to retrieve book titles:  
 
     <?xml version="1.0" encoding="UTF-8"?>
+
     <bookstore>
+
         <book>
+
             <title lang="en">Harry Potter</title>
             <author>J.K. Rowling</author>
             <price>29.99</price>
+
         </book>
+
         <book>
+
             <title lang="en">Learning XML</title>
             <author>Erik T. Ray</author>
             <price>39.95</price>
+
         </book>
+
     </bookstore>
 
 
