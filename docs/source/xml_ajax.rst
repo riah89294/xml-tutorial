@@ -29,15 +29,15 @@ This object interacts with the server using methods such as open() (to set reque
 
 Security restrictions prevent cross-domain requests, meaning the web page and requested file must be on the same server.
 
-Key XMLHttpRequest properties include:
+**Key XMLHttpRequest properties include:**
 
-onreadystatechange: Defines a function to handle state changes.
+- onreadystatechange: Defines a function to handle state changes.
 
-readyState: Tracks request status (0-4).
+- readyState: Tracks request status (0-4).
 
-responseText/responseXML: Retrieves server responses.
+- responseText/responseXML: Retrieves server responses.
 
-status/statusText: Provides request status (e.g., 200: "OK", 404: "Not Found").
+- status/statusText: Provides request status (e.g., 200: "OK", 404: "Not Found").
 
 **AJAX - Send a Request To a Server**
 -------------------------------------
