@@ -64,6 +64,7 @@ The **XMLHttpRequest** object enables web pages to communicate with a server wit
 The **onreadystatechange** property defines a function that executes when the **readyState** of an **XMLHttpRequest** changes. The **readyState** has five values (0-4), where 4 indicates the response is complete. The **status** property provides HTTP status codes, such as **200 (OK)** or **404 (Not Found)**. The **responseText** property retrieves data as a string, while **responseXML** returns it as an XML DOM object. Callback functions can handle multiple AJAX tasks efficiently. Methods like **getResponseHeader()** and **getAllResponseHeaders()** retrieve server response headers. These features allow AJAX to fetch and display data dynamically, enhancing web application interactivity without page reloads.
 
 **Example: Handling AJAX Response Efficiently**
+  
   function loadDoc(url, callback) {
     var xhttp = new XMLHttpRequest();
     
@@ -100,5 +101,71 @@ function handleTextResponse(xhttp) {
 
   // Load an XML response
   loadDoc("cd_catalog.xml", handleXMLResponse);
+
+**The XML File**
+----------------
+AJAX enables web pages to fetch and display XML data dynamically without reloading. The loadDoc() function creates an XMLHttpRequest object, retrieves the XML file, and triggers a callback function when the response is ready. The myFunction() function processes the XML data, extracts elements like TITLE and ARTIST, and updates the HTML table dynamically.
+**example:**
+  function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              myFunction(this);
+          }
+      };
+      xhttp.open("GET", "cd_catalog.xml", true);
+      xhttp.send();
+  }
+
+  function myFunction(xml) {
+      var i;
+      var xmlDoc = xml.responseXML;
+      var table = "<tr><th>Title</th><th>Artist</th></tr>";
+      var x = xmlDoc.getElementsByTagName("CD");
+
+      for (i = 0; i < x.length; i++) {
+          table += "<tr><td>" +
+          x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+          "</td></tr>";
+      }
+
+      document.getElementById("demo").innerHTML = table;
+  }
+
+**AJAX PHP**
+------------
+AJAX with PHP enhances interactivity by dynamically retrieving data from the server without page reloads. When a user types in an input field, the showHint() function sends an AJAX request to a PHP file (gethint.php), which searches an array for matching names and returns suggestions in real-time.
+**example**
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <script>
+  function showHint(str) {
+      if (str.length == 0) {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+      } else {
+          var xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("txtHint").innerHTML = this.responseText;
+              }
+          };
+          xmlhttp.open("GET", "gethint.php?q=" + str, true);
+          xmlhttp.send();
+      }
+  }
+  </script>
+  </head>
+  <body>
+  <p><b>Start typing a name:</b></p>
+  <form>
+      First name: <input type="text" onkeyup="showHint(this.value)">
+  </form>
+  <p>Suggestions: <span id="txtHint"></span></p>
+  </body>
+  </html>
 
   
