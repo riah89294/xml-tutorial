@@ -37,10 +37,10 @@ Here is a sample XML file and an XPath query to retrieve book titles:
     </bookstore>
 
 
-XPath Query:
-  `/bookstore/book/title`  
+**XPath Query:**
+ - `/bookstore/book/title`  
 
-Expected Output:  
+**Output:**  
   - Harry Potter  
   - Learning XML  
 
