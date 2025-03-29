@@ -5,7 +5,7 @@ Welcome to XML AJAX!
 
 **AJAX Example:**
 
-<!DOCTYPE html>
+<?!DOCTYPE html>
 <html>
 <body>
 
