@@ -6,15 +6,20 @@ Welcome to XML AJAX!
 **AJAX Example:**
 
   <!DOCTYPE html>
+
   <html>
+
   <body>
 
   <div id="demo">
+
     <h2>Let AJAX change this text</h2>
     <button type="button" onclick="loadDoc()">Change Content</button>
+
   </div>
 
   </body>
+
   </html>
 
 **AJAX - The XMLHttpRequest Object**
@@ -41,7 +46,7 @@ Security restrictions prevent cross-domain requests, meaning the web page and re
 
 **AJAX - Send a Request To a Server**
 -------------------------------------
-The **XMLHttpRequest** object enables web pages to communicate with a server without reloading. To send a request, the **open()** method specifies the request type (GET or POST), the URL, and whether it is asynchronous, while the **send()** method transmits the request. **GET** requests are simpler and faster but may return cached data, whereas **POST** is used for larger data transfers, database updates, or secure user input handling. When using POST, an HTTP header must be set with **setRequestHeader()** before sending data. AJAX requests should typically be asynchronous (**async = true**) to prevent page freezing, allowing scripts to execute while waiting for a response. Synchronous requests (**async = false**) block script execution until the server responds and are discouraged due to performance issues. To handle server responses, the **onreadystatechange** property defines a function that executes when the request state changes. When **readyState** reaches 4 and **status** is 200, the response can be processed and displayed. AJAX is widely used in modern web development to create dynamic and interactive applications by enabling real-time data updates without requiring full page reloads.
+The **XMLHttpRequest** object allows web pages to communicate with a server without reloading. **GET** requests are fast but may return cached data, while **POST** handles larger or sensitive data. AJAX requests should be asynchronous to prevent freezing. The **onreadystatechange** property manages responses, enabling dynamic and interactive web applications.
 
   // Create an XMLHttpRequest object
   var xhttp = new XMLHttpRequest();
@@ -61,7 +66,7 @@ The **XMLHttpRequest** object enables web pages to communicate with a server wit
 
 **AJAX - Server Response**
 -------------------------
-The **onreadystatechange** property defines a function that executes when the **readyState** of an **XMLHttpRequest** changes. The **readyState** has five values (0-4), where 4 indicates the response is complete. The **status** property provides HTTP status codes, such as **200 (OK)** or **404 (Not Found)**. The **responseText** property retrieves data as a string, while **responseXML** returns it as an XML DOM object. Callback functions can handle multiple AJAX tasks efficiently. Methods like **getResponseHeader()** and **getAllResponseHeaders()** retrieve server response headers. These features allow AJAX to fetch and display data dynamically, enhancing web application interactivity without page reloads.
+The **onreadystatechange** property monitors **readyState** changes in an **XMLHttpRequest**, with 4 indicating completion. The **status** property checks HTTP responses, while **responseText** and **responseXML** retrieve data. AJAX enables dynamic updates using callback functions and header retrieval methods, improving web interactivity without requiring full page reloads.
 
 **Example: Handling AJAX Response Efficiently**
   
@@ -143,9 +148,13 @@ AJAX with PHP enhances interactivity by dynamically retrieving data from the ser
 **example**
 
   <!DOCTYPE html>
+
   <html>
+
   <head>
+
   <script>
+  
   function showHint(str) {
       if (str.length == 0) {
           document.getElementById("txtHint").innerHTML = "";
@@ -161,15 +170,24 @@ AJAX with PHP enhances interactivity by dynamically retrieving data from the ser
           xmlhttp.send();
       }
   }
+  
   </script>
+  
   </head>
+  
   <body>
+  
   <p><b>Start typing a name:</b></p>
+  
   <form>
       First name: <input type="text" onkeyup="showHint(this.value)">
+ 
   </form>
+  
   <p>Suggestions: <span id="txtHint"></span></p>
+ 
   </body>
+  
   </html>
 
 **AJAX ASP**
@@ -181,8 +199,11 @@ AJAX with ASP enables real-time communication between a web page and a server wi
 - html-front-end
 
   <html>
+
   <head>
+  
   <script>
+  
   function showHint(str) {
       if (str.length == 0) {
           document.getElementById("txtHint").innerHTML = "";
@@ -198,17 +219,25 @@ AJAX with ASP enables real-time communication between a web page and a server wi
           xmlhttp.send();
       }
   }
+  
   </script>
+  
   </head>
+  
   <body>
 
   <p><b>Start typing a name in the input field below:</b></p>
+  
   <form>
   First name: <input type="text" onkeyup="showHint(this.value)">
+  
   </form>
   <p>Suggestions: <span id="txtHint"></span></p>
+  
   </body>
+  
   </html>
+
 - **ASP Back-end (gethint.asp)**
 
   <%
@@ -257,9 +286,13 @@ AJAX retrieves database data without page reloads. When a user selects a custome
 **example: AJAX Request**
 
   <!DOCTYPE html>
+  
   <html>
+  
   <head>
+  
   <script>
+  
   function showCustomer(str) {
       if (str == "") {
           document.getElementById("txtHint").innerHTML = "";
@@ -274,22 +307,28 @@ AJAX retrieves database data without page reloads. When a user selects a custome
       xhttp.open("GET", "getcustomer.php?q=" + str, true);
       xhttp.send();
   }
+  
   </script>
+  
   </head>
+  
   <body>
 
   <h2>Select a Customer:</h2>
+  
   <select onchange="showCustomer(this.value)">
       <option value="">Select a customer</option>
       <option value="1">Customer 1</option>
       <option value="2">Customer 2</option>
       <option value="3">Customer 3</option>
+  
   </select>
 
   <h3>Customer Info:</h3>
   <div id="txtHint">Customer details will be displayed here...</div>
 
   </body>
+  
   </html>
 
 XML Applications
@@ -299,8 +338,11 @@ XML and JavaScript enable dynamic web applications. An XML file (`cd_catalog.xml
 **example:Displaying and Navigating XML Data Using JavaScript and AJAX**
 
   <!DOCTYPE html>
+
   <html lang="en">
+  
   <head>
+
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>XML CD Catalog</title>
@@ -310,8 +352,11 @@ XML and JavaScript enable dynamic web applications. An XML file (`cd_catalog.xml
               border-collapse: collapse;
               padding: 5px;
           }
-      </style>
+
+     </style>
+  
   </head>
+
   <body>
 
       <h2>CD Catalog</h2>
@@ -324,6 +369,7 @@ XML and JavaScript enable dynamic web applications. An XML file (`cd_catalog.xml
       <button onclick="nextCD()">Next</button>
 
       <script>
+
           var x, i = 0;  // Variables to store XML data and index
 
           function loadXMLDoc() {
@@ -377,6 +423,7 @@ XML and JavaScript enable dynamic web applications. An XML file (`cd_catalog.xml
       </script>
 
   </body>
+
   </html>
 
 conclusion
