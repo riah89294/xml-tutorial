@@ -14,7 +14,6 @@ By applying these concepts, we strengthened our ability to query and manipulate 
 
 Here is a sample XML file and an XPath query to retrieve book titles:  
 
-  ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <bookstore>
         <book>
@@ -30,13 +29,10 @@ Here is a sample XML file and an XPath query to retrieve book titles:
     </bookstore>
 
 
-XPath Query:  
-`/bookstore/book/title`  
+XPath Query:
+  `/bookstore/book/title`  
 
 Expected Output:  
-- Harry Potter  
-- Learning XML  
+  - Harry Potter  
+  - Learning XML  
 
-Through this learning experience, we gained practical skills in XPath, enabling us to efficiently extract, filter, and manipulate XML data for various applications.
-
-  
