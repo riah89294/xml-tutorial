@@ -6,7 +6,9 @@ Welcome to XML AJAX!
 **AJAX Example:**
 
 <!-- This is an example of using AJAX to change content dynamically -->
+
 <!DOCTYPE html>
+
 <html>
 <body>
 
