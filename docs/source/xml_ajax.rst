@@ -106,6 +106,7 @@ function handleTextResponse(xhttp) {
 ----------------
 AJAX enables web pages to fetch and display XML data dynamically without reloading. The loadDoc() function creates an XMLHttpRequest object, retrieves the XML file, and triggers a callback function when the response is ready. The myFunction() function processes the XML data, extracts elements like TITLE and ARTIST, and updates the HTML table dynamically.
 **example:**
+
   function loadDoc() {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
@@ -138,6 +139,7 @@ AJAX enables web pages to fetch and display XML data dynamically without reloadi
 ------------
 AJAX with PHP enhances interactivity by dynamically retrieving data from the server without page reloads. When a user types in an input field, the showHint() function sends an AJAX request to a PHP file (gethint.php), which searches an array for matching names and returns suggestions in real-time.
 **example**
+
   <!DOCTYPE html>
   <html>
   <head>
@@ -167,11 +169,13 @@ AJAX with PHP enhances interactivity by dynamically retrieving data from the ser
   <p>Suggestions: <span id="txtHint"></span></p>
   </body>
   </html>
+
 **AJAX ASP**
 ------------
 AJAX with ASP enables real-time communication between a web page and a server without refreshing. When a user types in an input field, the **showHint()** function sends an AJAX request to **gethint.asp**, which searches a predefined array for matching names and returns suggestions dynamically, improving user experience and interactivity.
 
 **example:**
+
 - html-front-end
   <html>
   <head>
