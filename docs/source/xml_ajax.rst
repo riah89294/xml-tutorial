@@ -16,3 +16,25 @@ Welcome to XML AJAX!
 
 </body>
 </html>
+
+**AJAX - The XMLHttpRequest Object**
+
+Its core component is the XMLHttpRequest object, which allows seamless data exchange with a server. All modern browsers support this object.
+
+To create an XMLHttpRequest object, use:
+
+var xhttp = new XMLHttpRequest();
+
+This object interacts with the server using methods such as open() (to set request parameters) and send() (to send the request). Requests can be GET or POST, and authentication details can be included if needed.
+
+Security restrictions prevent cross-domain requests, meaning the web page and requested file must be on the same server.
+
+Key XMLHttpRequest properties include:
+
+onreadystatechange: Defines a function to handle state changes.
+
+readyState: Tracks request status (0-4).
+
+responseText/responseXML: Retrieves server responses.
+
+status/statusText: Provides request status (e.g., 200: "OK", 404: "Not Found").
