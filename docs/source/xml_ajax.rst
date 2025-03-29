@@ -250,7 +250,7 @@ AJAX with ASP enables real-time communication between a web page and a server wi
   end if
   %>
 
-**AJAX Database **
+AJAX Database 
 ------------------
 AJAX retrieves database data without page reloads. When a user selects a customer, showCustomer() sends an AJAX request to getcustomer.php, which queries the database and returns customer details dynamically in an HTML table, enhancing interactivity.
 
