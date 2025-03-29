@@ -5,6 +5,8 @@ Welcome to XML AJAX!
 
 **AJAX Example:**
 
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
 <?!DOCTYPE html>
 <html>
 <body>
@@ -16,3 +18,4 @@ Welcome to XML AJAX!
 
 </body>
 </html>
+</note>
