@@ -8,10 +8,8 @@ Welcome to XML AJAX!
 <!-- This is an example of using AJAX to change content dynamically -->
 
 <!DOCTYPE html>
-
 <html>
 <body>
-
     <div id="demo">
         <h2>Let AJAX change this text</h2>
         <!-- Button triggers AJAX function -->
