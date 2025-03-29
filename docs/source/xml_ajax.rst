@@ -59,5 +59,9 @@ The **XMLHttpRequest** object enables web pages to communicate with a server wit
   // Send the request
   xhttp.send();
 
+**AJAX - Server Response**
+-------------------------
+The **onreadystatechange** property defines a function that executes when the **readyState** of an **XMLHttpRequest** changes. The **readyState** has five values (0-4), where 4 indicates the response is complete. The **status** property provides HTTP status codes, such as **200 (OK)** or **404 (Not Found)**. The **responseText** property retrieves data as a string, while **responseXML** returns it as an XML DOM object. Callback functions can handle multiple AJAX tasks efficiently. Methods like **getResponseHeader()** and **getAllResponseHeaders()** retrieve server response headers. These features allow AJAX to fetch and display data dynamically, enhancing web application interactivity without page reloads.
 
+**example**
 
