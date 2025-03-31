@@ -1,5 +1,8 @@
 
-  Types of XSD Data Types
+  XSD DATA TYPES
+
+ I learned XML Schema Definition (XSD) is used to define the structure and rules for XML documents is It specifies elements, attributes, and data types, ensuring XML documents are valid and well-formed. And Unlike DTD, XSD supports data types, namespaces, and complex data structures.
+Types of XSD Data Types
 XSD offers two main types of data types:
  The Simple Data Types
 •	Used for elements and attributes that contain only text (no child elements or attributes).
@@ -59,6 +62,40 @@ Advantages of XSD:
 
 LEARNING SUMMARY
  I learned the XSD data types is to ensure that the content of XML documents follows the correct data format. Data types in XSD define the kind of data an element or attribute can contain, such as text, numbers, dates, and more. By using data types, XML documents can be validated to ensure that they adhere to specific rules and constraints, preventing errors during data processing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
