@@ -31,6 +31,6 @@ Contents
    xsd_schema.rst
    xsd_datatypes.rst
    web_services.rst
-   Vega_xml_path_example
+   Vega_xml_path_example.rst
  
 
